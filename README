@@ -1,0 +1,27 @@
+Trackify
+========
+Easily pull XML tracking data from The Big Four (TM) carriers (UPS, FedEx, DHL, USPS). Trackify does the heavy lifting on figuring out which carrier it is. All you do is drop in the tracking number.
+
+This is the first round on yanking out some of the innards of our package tracking stuff from http://trackthepack.com
+
+Needs a lot of refactoring could use some more "features" to make it useful, but gotta start somewhere.
+
+
+Install
+=======
+
+* script/plugin install git://github.com/Shpigford/trackify.git
+* Edit the config/trackify_config.yml file to drop in your credentials for each carrier
+
+
+Example
+=======
+
+*Determine what type of number it is being passed*
+Trackify.carrier_type('385693310051770')
+
+*Pull the XML tracking data*
+Trackify.track('385693310051770')
+
+
+Copyright (c) 2009 Josh Pigford, released under the MIT license
